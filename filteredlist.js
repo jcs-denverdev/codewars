@@ -8,6 +8,8 @@
 let test = [1,2,'aasf','1','123',123]
 
 function filter_list(list) {
+    // use filter method
+    // check each element to see if they are integers
     return list.filter((e) => Number.isInteger(e))
 }
 
