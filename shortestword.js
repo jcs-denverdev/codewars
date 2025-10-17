@@ -9,9 +9,24 @@ function findShort(s) {
     //P: singular parameter, s, represents a string of words that will be passed to this function. s will never be an empty string, and will always be a string
     //R: return the length of the shortest word
     //E: "Let's travel abroad shall we" --> shortest word is "we" --> length 2
-        // "turns out random test cases are easier than writing out basic ones" --> shortest word is "out", "are" --> length 3
+    // "turns out random test cases are easier than writing out basic ones" --> shortest word is "out", "are" --> length 3
     
-    //P: 
+    //P: convert s to an array, splitting at each space
+    let a = s.split(' ')
+    
+    // now there is an array of each word, so we can check each element length
+    let shortest;
+    for (let i = 0; i < a.length; i++) {
+        // a[i].length returns a number
+        shortest = a[i].length // shortest now equals length of first element/word
+        
+        if (a[i].length < shortest) {
+            shortest = a[i].length
+            console.log(shortest)
+        }
+    }
+    return shortest
+
 }
 
 console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
