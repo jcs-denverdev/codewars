@@ -5,7 +5,7 @@
 // Your function should only return a number, not the explanation about how you get that number.
 
 //Parameters: functions accepts two integers, a and b, which can be + or -
-//Returns: find the sum of the range of integers between the two integer params, inclusive
+//Returns: given two ints, find the sum of the range of integers between the two int params, inclusive
 //Examples: (a, b) --> output (explanation)
     // (1, 0) --> 1 (1 + 0 = 1)
     // (1, 2) --> 3 (1 + 2 = 3)
@@ -20,6 +20,20 @@
 
 function getSum(a, b) {
 
-
+    if (a === b) {
+        return a
+    }
+    let sum = 0;
+    let arr = [];
+    arr.push(a);
+    arr.push(b);
+    
+    arr.sort((a,b) => a - b)
+    for (let i = arr[1]; i >= arr[0]; i--) {
+        sum += i;
+    }
+    return sum
     
 }
+
+console.log(getSum(1, 3))
