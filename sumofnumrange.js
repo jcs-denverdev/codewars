@@ -20,19 +20,22 @@
 
 function getSum(a, b) {
 
-    if (a === b) {
-        return a
-    }
-    let sum = 0;
-    let arr = [];
-    arr.push(a);
-    arr.push(b);
+    // if (a === b) {
+    //     return a
+    // }
+    // let sum = 0;
+    // let arr = [];
+    // arr.push(a);
+    // arr.push(b);
     
-    arr.sort((a,b) => a - b)
-    for (let i = arr[1]; i >= arr[0]; i--) {
-        sum += i;
-    }
-    return sum
+    // arr.sort((a,b) => a - b)
+    // for (let i = arr[1]; i >= arr[0]; i--) {
+    //     sum += i;
+    // }
+    // return sum
+    let min = Math.min(a,b),
+        max = Math.max(a,b);
+    return (max - min + 1) * (min + max) / 2
     
 }
 
