@@ -4,15 +4,20 @@
 
 // Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
 
-//Parameters: 
-//Returns: 
+//Parameters: a beast and a dish, two strings
+//Returns: true or false, based on the first letter of the dish matching the first letter of the beast
 //Examples:
+    // "bear", "beans" --> true
+    // "tiger", "jello" --> false
 //Pseudocode:
+// no need to check for lowercase or numbers
+// grab the first letter of beast
+// check if that matches the first letter of dish
 
 function feast(beast, dish) {
 
-
+    return beast[0] == dish[0] ? true : false
 
 }
 
-console.log(feast("brown bear", "bear claw"))
+console.log(feast("brown bear", "dear claw"))
