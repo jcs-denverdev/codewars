@@ -23,7 +23,6 @@ class Fighter {
     get damagePerAttack() {
         return this.#damagePerAttack;
     }
-
     constructor(name, health, damagePerAttack) {
       this.#name = name;
       this.#damagePerAttack = damagePerAttack;
@@ -32,25 +31,40 @@ class Fighter {
 }
 
 //Pseudocode
-// 
+// first we should find out who is attacking whom
+// if the first attacker == fighter1.name, fighter1.name attacks fighter2.name
+    // they take turns attacking until one of them dies
+// if the first attacker == fighter2.name, fighter2.name attacks fighter1.name
+    // they take turns attacking until one of them dies
+
 
 function declareWinner(fighter1, fighter2, firstAttacker) {
 
-    if (firstAttacker === fighter1.name) {
-        fighter2.health -= fighter1.damagePerAttack
-        fighter1.health -= fighter2.damagePerAttack
+    if (firstAttacker === fighter1.name) { // Lew is attacking Harry
 
-        if (fighter2.health <= 0) {
-            return `${firstAttacker} attacks ${fighter2.name}; ${fighter2.name} now has ${fighter2.health} health and is dead. Lew wins.`
-        }
+        // fighters take turns, how does that happen? Do we need a loop?
+        do {
+            console.log(fighter2.health)
+            fighter2.health -= fighter1.damagePerAttack
+            
+        } while (fighter2.health > 0)
+        
+        return `${firstAttacker} attacks ${fighter2.name}; ${fighter2.name} now has ${fighter2.health} health and is dead. ${fighter1.name} wins.`
 
-        return `${firstAttacker} attacks ${fighter2.name}; ${fighter2.name} now has ${fighter2.health} health`
+        
+    //     fighter1.health -= fighter2.damagePerAttack
 
-    } else { // fighter2 is first attacker
-        if (fighter1.health <= 0) {
-            return `${firstAttacker} attacks ${fighter1.name}; ${fighter1.name} now has ${fighter1.health} health and is dead. Lew wins.`
-        }
-        return `${firstAttacker} attacks ${fighter1.name}; ${fighter1.name} now has ${fighter1.health} health`
+    //     if (fighter2.health <= 0) {
+    //         return `${firstAttacker} attacks ${fighter2.name}; ${fighter2.name} now has ${fighter2.health} health and is dead. Lew wins.`
+    //     }
+
+    //     return `${firstAttacker} attacks ${fighter2.name}; ${fighter2.name} now has ${fighter2.health} health`
+
+    // } else { // fighter2 is first attacker
+    //     if (fighter1.health <= 0) {
+    //         return `${firstAttacker} attacks ${fighter1.name}; ${fighter1.name} now has ${fighter1.health} health and is dead. Lew wins.`
+    //     }
+    //     return `${firstAttacker} attacks ${fighter1.name}; ${fighter1.name} now has ${fighter1.health} health`
 
     }
     
