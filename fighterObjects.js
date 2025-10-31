@@ -44,27 +44,27 @@ function declareWinner(fighter1, fighter2, firstAttacker) {
 
         // fighters take turns, how does that happen? Do we need a loop?
         do {
-            console.log(fighter2.health)
+            console.log(`${fighter1.name} attacks ${fighter2.name}; ${fighter2.name} now has ${fighter2.health} health.`);
+            console.log(`${fighter2.name} attacks ${fighter1.name}; ${fighter1.name} now has ${fighter1.health} health.`);
             fighter2.health -= fighter1.damagePerAttack
+            fighter1.health -= fighter2.damagePerAttack
             
         } while (fighter2.health > 0)
         
         return `${firstAttacker} attacks ${fighter2.name}; ${fighter2.name} now has ${fighter2.health} health and is dead. ${fighter1.name} wins.`
 
+
+    } else { // fighter2 is first attacker
+
+        do {
+            console.log(`${fighter2.name} attacks ${fighter1.name}; ${fighter1.name} now has ${fighter1.health} health.`);
+            console.log(`${fighter1.name} attacks ${fighter2.name}; ${fighter2.name} now has ${fighter2.health} health.`);
+            fighter2.health -= fighter1.damagePerAttack
+            fighter1.health -= fighter2.damagePerAttack
+            
+        } while (fighter1.health > 0)
         
-    //     fighter1.health -= fighter2.damagePerAttack
-
-    //     if (fighter2.health <= 0) {
-    //         return `${firstAttacker} attacks ${fighter2.name}; ${fighter2.name} now has ${fighter2.health} health and is dead. Lew wins.`
-    //     }
-
-    //     return `${firstAttacker} attacks ${fighter2.name}; ${fighter2.name} now has ${fighter2.health} health`
-
-    // } else { // fighter2 is first attacker
-    //     if (fighter1.health <= 0) {
-    //         return `${firstAttacker} attacks ${fighter1.name}; ${fighter1.name} now has ${fighter1.health} health and is dead. Lew wins.`
-    //     }
-    //     return `${firstAttacker} attacks ${fighter1.name}; ${fighter1.name} now has ${fighter1.health} health`
+        return `${firstAttacker} attacks ${fighter1.name}; ${fighter1.name} now has ${fighter1.health} health and is dead. ${fighter2.name} wins.`
 
     }
     
