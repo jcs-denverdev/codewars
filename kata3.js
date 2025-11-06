@@ -7,20 +7,11 @@
 
 let testArray = ['codewars', 'flick', 'code', 'wars'];
 
-const found = testArray.find((element) => element == 'flick');
-console.log(found)
+function flickSwitch(arr){
+    let returning = true;
 
-const indexOfFlick = testArray.indexOf("flick");
-console.log(indexOfFlick)
-// const flickSwitch = (arr) => {
-//     arr.forEach(element => {
-//         if (element == 'flick') {
-//             element = 'true'
-//         } else {
-//             element = element
-//         }
-//     });
-//     console.log(arr);
-// }
-
-// flickSwitch(testArray);
+    return arr.map((word) => {
+        return (word === "flick") ? returning = !returning : returning;
+    })
+}
+console.log(flickSwitch(testArray))
