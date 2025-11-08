@@ -25,3 +25,7 @@ function multiples (x, n) {
 }
 
 console.log(multiples(1, 10))
+
+// codewars top solution
+// const countBy = (x, n) => Array.from( {length: n}, (v, k) => (k + 1) * x)
+// console.log(countBy(4, 5))
