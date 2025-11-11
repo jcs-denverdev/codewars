@@ -9,7 +9,7 @@ test = [100,100,116,105,117,121]
 
 function isVow(a){
 
-    const vowelCodes = {
+    const vowels = {
         "97": "a",
         "101": "e",
         "105": "i",
@@ -17,7 +17,7 @@ function isVow(a){
         "117": "u"
     }
 
-    // return a.map(x => vowelCodes[x] || x)
+    return a.map( num => vowels[num] ? vowels[num] : num)
 
 }
 
