@@ -6,21 +6,19 @@
 
 // The array will always have at least 2 elements and all elements will be numbers. The numbers will also all be unique and in ascending order. The numbers could be positive or negative and the first non-consecutive could be either too!
 
-let arr1 = [1,2,3,4,5,6,7,8];
+let arr1 = [1,2,3,4,5,7,8];
 
 function findNonConsecutive (arr) {
 
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length -1; i++) {
         if (arr.length == 1) {
             return arr
         }
         if (arr[i] + 1 !== arr[i+1]) {
             return arr[i+1]
-        }
-        
+        } 
     }
     return null
-
 }
 
 console.log(findNonConsecutive(arr1))
