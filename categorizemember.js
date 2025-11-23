@@ -19,7 +19,8 @@ function openOrSenior (data) {
         // data[i] returns each nested array and the values within them
         // console.log(data[i])
 
-        
+        // first element in each array is age, so you can target [i][0]
+        // second element is hdcp, so you can target [i][1]
         if (data[i][0] >= 55 && data[i][1] > 7) {
             data[i] = "Senior"
         } else {
