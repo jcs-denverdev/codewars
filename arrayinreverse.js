@@ -7,7 +7,7 @@
 
 function digitize(n) {
 
-    return n.toString().split('').reverse()
+    return String(n).split('').reverse().map(Number)
 
 }
 
