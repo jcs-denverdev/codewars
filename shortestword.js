@@ -13,16 +13,16 @@ function findShort(s) {
     
     //P: convert s to an array, splitting at each space
     let a = s.split(' ')
-    
+
     // now there is an array of each word, so we can check each element length
-    let shortest;
+    // store the shortest length, starting with first element, then we'll check each element following that with a for loop
+    let shortest = a[0].length;
+
+    // iterate through array
     for (let i = 0; i < a.length; i++) {
-        // a[i].length returns a number
-        shortest = a[i].length // shortest now equals length of first element/word
-        
+        // if the length of any element is less than the first element, reassign shortest
         if (a[i].length < shortest) {
             shortest = a[i].length
-            console.log(shortest)
         }
     }
     return shortest
