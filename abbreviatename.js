@@ -13,12 +13,12 @@
 
 function abbrevName(name){
 
-    let a = name.split(' ');
+    return name.split(' ')
+               .map((letter) => letter[0])
+               .join('.')
+               .toUpperCase();
 
-    a = a.map((letter) => letter[0]).join('.').toUpperCase()
-
-    return a
     // return `${a[0][0].toUpperCase()}.${a[1][0].toUpperCase()}`
 }
 
-console.log(abbrevName("s harris booty"));
+console.log(abbrevName("sam h booty"));
