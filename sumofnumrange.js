@@ -18,6 +18,9 @@
 // a and b are not ordered, so first need to find if numbers are same or if one is greater
 // reduce() to find sum?
 
+//use math.min and math.max using params to find which num is greater
+// max - min + 1 * min+max / 2 -- not sure why this works but the math guys got it
+
 function getSum(a, b) {
 
     // if (a === b) {
