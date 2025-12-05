@@ -20,6 +20,7 @@ function check(a, x) {
     for (let i = 0; i < a.length; i++) {
         return a.includes(x)
     }
+    // for loop not necessary. includes method loops through already!!
 
 }
 

@@ -10,10 +10,16 @@
 // there should be a trim method on the string object in javascript
 // just call that and return it to see what happens
 // welp that didn't work. if neither the beginning or end of str has any whitespace, a new string is still returned (essentially a copy of str)
+// could always convert str to array, find empty spaces, and filter them out
 
 function noSpace(x){
 
-    return x.trim()
+    // return x.trim()
+
+    return x.split('')
+            .filter((e) => e !== " ")
+            .join('')
+    
 
 }
 
