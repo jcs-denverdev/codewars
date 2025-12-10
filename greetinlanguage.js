@@ -5,23 +5,53 @@
 // Write a 'welcome' function that takes a parameter 'language', with a type String, and returns a greeting - if you have it in your database. It should default to English if the language is not in the database, or in the event of an invalid input.
 // The Database
 // Please modify this as appropriate for your language.
-
 // [ ("english", "Welcome"), ("czech", "Vitejte"), ("danish", "Velkomst"), ("dutch", "Welkom"), ("estonian", "Tere tulemast"), ("finnish", "Tervetuloa"), ("flemish", "Welgekomen"), ("french", "Bienvenue"), ("german", "Willkommen"), ("irish", "Failte"), ("italian", "Benvenuto"), ("latvian", "Gaidits"), ("lithuanian", "Laukiamas"), ("polish", "Witamy"), ("spanish", "Bienvenido"), ("swedish", "Valkommen"), ("welsh", "Croeso") ]
+// let database = [ ["english", "Welcome"], ["czech", "Vitejte"], ["danish", "Velkomst"], ["dutch", "Welkom"], ["estonian", "Tere tulemast"], ["finnish", "Tervetuloa"], ["flemish", "Welgekomen"], ["french", "Bienvenue"], ["german", "Willkommen"], ["irish", "Failte"], ["italian", "Benvenuto"], ["latvian", "Gaidits"], ["lithuanian", "Laukiamas"], ["polish", "Witamy"], ["spanish", "Bienvenido"], ["swedish", "Valkommen"], ["welsh", "Croeso"] ]
 // Possible invalid inputs include:
 // IP_ADDRESS_INVALID - not a valid ipv4 or ipv6 ip address
 // IP_ADDRESS_NOT_FOUND - ip address not in the database
 // IP_ADDRESS_REQUIRED - no ip address was supplied
 
-//Params: language as a string
+//Params: language as a string, but possible inputs include those above^
 //Returns: "welcome" in the same language as the given param. default to english if language not in database
 //Examples:
     // greet("french") => bienvenue
     // greet("polish") => witamy
 //Pseudocode:
-
+// if database includes language property, return the value
+// how to loop through "database" object? for...in
+// 
 
 function greet(language) {
 
+    // for (const lang in database) {
 
+    //     if (language === lang) {
+    //         return database[lang]
+    //     }
+    // }
+    let database = {
+        "english": "Welcome",
+        "czech": "Vitejte",
+        "danish": "Velkomst",
+        "dutch": "Welkom",
+        "estonian": "Tere tulemast",
+        "finnish": "Tervetuloa",
+        "flemish": "Welgekomen",
+        "french": "Bienvenue",
+        "german": "Willkommen",
+        "irish": "Failte",
+        "italian": "Benvenuto",
+        "latvian": "Gaidits",
+        "lithuanian": "Laukiamas",
+        "polish": "Witamy",
+        "spanish": "Bienvenido",
+        "swedish": "Valkommen",
+        "welsh": "Croeso"
+    }
 
+    return database[language] || database['english']
+    
 }
+
+console.log(greet("creole"))
