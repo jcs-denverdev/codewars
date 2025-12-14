@@ -16,7 +16,6 @@
 
 function addBinary (a,b) {
 
-    // return parseInt(a.join(''), 2)
     let sum = a + b
 
     return sum.toString(2)
