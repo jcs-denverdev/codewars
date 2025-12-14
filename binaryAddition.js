@@ -11,14 +11,15 @@
     // 1, 1 --> "10" (1 + 1 = 2 in decimal or 10 in binary)
     // 5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
 //Pseudocode
-
+// start by finding the sum a+b
+// 
 
 function addBinary (a,b) {
 
     // return parseInt(a.join(''), 2)
     let sum = a + b
-    
-    return sum
+
+    return sum.toString(2)
 
 }
 
