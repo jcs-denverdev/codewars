@@ -36,8 +36,25 @@ class Fighter {
 
 function declareWinner(fighter1, fighter2, firstAttacker) {
 
-    console.log(`${firstAttacker} attacks!`)
+    if (firstAttacker === fighter1.name) {
+        fighter2.health -= fighter1.damagePerAttack
+        fighter1.health -= fighter2.damagePerAttack
+
+        if (fighter2.health <= 0) {
+            return `${firstAttacker} attacks ${fighter2.name}; ${fighter2.name} now has ${fighter2.health} health and is dead. Lew wins.`
+        }
+
+        return `${firstAttacker} attacks ${fighter2.name}; ${fighter2.name} now has ${fighter2.health} health`
+
+    } else { // fighter2 is first attacker
+        if (fighter1.health <= 0) {
+            return `${firstAttacker} attacks ${fighter1.name}; ${fighter1.name} now has ${fighter1.health} health and is dead. Lew wins.`
+        }
+        return `${firstAttacker} attacks ${fighter1.name}; ${fighter1.name} now has ${fighter1.health} health`
+
+    }
+    
 
 }
 
-declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew")
+console.log(declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew"))
