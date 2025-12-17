@@ -24,7 +24,8 @@
 function mergeArrays(arr1, arr2) {
 
     let merged = arr1.concat(arr2)
-    
+    let uniqueInts = merged.filter((item, index) => merged.indexOf(item) == index)
+    return uniqueInts.sort((a,b) => a-b)
 
 }
 
