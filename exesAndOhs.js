@@ -11,7 +11,10 @@
     // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
     // XO("zzoo") => false
 //Pseudocode
-// first, check mdn for string methods. includes() is a string AND array method
+// first, we need two variables for letter totals
+// then, loop through the str and check if str[i] equals one of the letters
+// add to each letter total as you come across them
+// if the totals are equal, return true
 
 function XO (str) {
 
