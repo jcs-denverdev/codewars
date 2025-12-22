@@ -12,12 +12,17 @@
 
 function reverseWords(str) {
 
-    // Reverse entire string as a whole
-    // return str.split('')
-    //           .reverse()
-    //           .join('')
+    // Reverse entire string as a whole, spaces removed
+    // str.split('') = ['This', 'is', 'an', 'example!']
+    //    .reverse() = ['example!', 'an', 'is', 'This']
+    //    .join('') = example!anisThis
 
-    
+    let arry = str.split(' ')
+    let newrry = []
+    for (let i = 0; i < arry.length; i++) {
+        newrry.push(arry[i].split('').reverse().join('')) // = 'sihT'
+    }
+    return newrry.join(' ')
 
 }
 
