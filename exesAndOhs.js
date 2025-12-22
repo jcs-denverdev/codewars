@@ -11,12 +11,22 @@
     // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
     // XO("zzoo") => false
 //Pseudocode
-// first, check mdn for string methods. if none, we can convert it to an array and use includes maybe
+// first, check mdn for string methods. includes() is a string AND array method
 
 function XO (str) {
 
+    let xCount = 0;
+    let oCount = 0;
 
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] == 'x' || str[i] == 'X') {
+            xCount++
+        } else if (str[i] == 'o' || str[i] == 'O') {
+            oCount++
+        }
+    }
+    return xCount == oCount ? true : false
 
 }
 
-console.log(XO("xooxx"))
+console.log(XO("xooox"))
