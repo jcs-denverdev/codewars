@@ -24,13 +24,15 @@ function countPositivesSumNegatives(input) {
     let count = 0;
     let sum = 0;
 
+    if (input == [] || input == null) {
+        return []
+    }
+
     for (let i = 0; i < input.length; i++) {
         if (input[i] > 0) {
             count++
         } else if (input[i] < 0) {
             sum += input[i]
-        } else {
-            return []
         }
     }
 
@@ -38,4 +40,4 @@ function countPositivesSumNegatives(input) {
 
 }
 
-console.log(countPositivesSumNegatives([1,2,3,-1,-2]))
+console.log(countPositivesSumNegatives([0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14]))
