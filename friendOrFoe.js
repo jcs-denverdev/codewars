@@ -16,11 +16,13 @@
     // Input = ["Peter", "Stephen", "Joe"]
     // Output = []
 //Pseudocode
-// 
+// loop through friends array
+// we can use filter() to banish names with length != 4
+// i think filter() loops through and we don't need to loop with a for loop
 
 function friend (friends) {
 
-    
+    return friends.filter((name) => name.length == 4)
 
 }
 
