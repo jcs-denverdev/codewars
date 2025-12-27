@@ -15,7 +15,9 @@
 
 function sortByLength (array) {
 
-    return array.sort()
+    return array.sort((a,b) => 
+        a.length - b.length
+    )
 
 }
 
