@@ -18,15 +18,19 @@
 // loop through numbers array
 // if the difference between the second element and the first element is more than one,
 // take the difference and put it in there
+// splice is not working right
+
 
 function pipeFix(numbers) {
 
     for (let i = 0; i < numbers.length; i++) {
         // checking if adding one to element at index i == the next element
-        if (numbers[i] + 1 != numbers[i+1]) {
-            //numbers.splice(i, 0, numbers[i]+1)
-            console.log(numbers[i]+1)
-        }
+        // if (numbers[i] + 1 != numbers[i+1]) { // numbers[i+1] equals the elements that aren't sequential (in this example they are 4, 7, and 10)
+        // if () {
+        //     numbers.splice(i,0,numbers[i]+1)
+        // }
+        // console.log(numbers[i] + ", " + Number(numbers[i]+1))
+        numbers.fill(numbers[i]+1, i)
     }
     return numbers
     
@@ -34,4 +38,4 @@ function pipeFix(numbers) {
     return numbers
 }
 
-console.log(pipeFix([1,2,4,7,10]))
+console.log(pipeFix([1,2,4,5]))
