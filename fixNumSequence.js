@@ -23,19 +23,14 @@
 
 function pipeFix(numbers) {
 
-    for (let i = 0; i < numbers.length; i++) {
-        // checking if adding one to element at index i == the next element
-        // if (numbers[i] + 1 != numbers[i+1]) { // numbers[i+1] equals the elements that aren't sequential (in this example they are 4, 7, and 10)
-        // if () {
-        //     numbers.splice(i,0,numbers[i]+1)
-        // }
-        // console.log(numbers[i] + ", " + Number(numbers[i]+1))
-        numbers.fill(numbers[i]+1, i)
+    let first = numbers[0];
+    let last = numbers[numbers.length-1];
+
+    let arr = [];
+    for (let i = first; i <= last; i++) {
+        arr.push(i);
     }
-    return numbers
-    
-    numbers.splice(1, 0, "yes")
-    return numbers
+    return arr;
 }
 
-console.log(pipeFix([1,2,4,5]))
+console.log(pipeFix([1,2,4,5,7]))
