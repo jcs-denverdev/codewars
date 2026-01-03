@@ -8,7 +8,9 @@
 //Examples
     // countSheep(3) --> "1 sheep...2 sheep...3 sheep..."
 //Pseudocode
-// declare a string literal
+// declare an empty string
+// use a for loop to iterate from 1 up to, and including, num
+// phrase += `${i} sheep...`
 
 function countSheep (num) {
 
