@@ -30,6 +30,7 @@ function solution(string) {
             strCopy.splice(i,0," ");
         }
     }
+    
 
     return strCopy
 
