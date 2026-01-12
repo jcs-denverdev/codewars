@@ -16,22 +16,23 @@
 
 function solution(string) {
 
+    // start by establishing a new variable with the string as an array
     let strCopy = string.split('');
 
     if (string == string.toLowerCase() || string == "") {
         return string
     }
 
-    // if a character code at index i is between 65 and 90 inclusive, 
+    // loop through string parameter
     for (let i = 0; i < string.length; i++) {
+    // if a character code at index i is between 65 and 90 inclusive, 
         if (string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 90) {
-            
             strCopy.splice(i,0," ");
         }
     }
-    return strCopy.join('')
 
+    return strCopy
 
 }
 
-console.log(solution("youreaButtt"))
+console.log(solution("camelCasingTest"))
