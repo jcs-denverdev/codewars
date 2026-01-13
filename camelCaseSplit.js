@@ -17,23 +17,32 @@
 function solution(string) {
 
     // start by establishing a new variable with the string as an array
-    let strCopy = string.split('');
+    // let strCopy = string.split('');
 
     if (string == string.toLowerCase() || string == "") {
         return string
     }
 
     // loop through string parameter
-    for (let i = 0; i < string.length; i++) {
-    // if a character code at index i is between 65 and 90 inclusive, 
-        if (string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 90) {
-            strCopy.splice(i,0," ");
+    // for (let i = 0; i < string.length; i++) {
+    // // if a character code at index i is between 65 and 90 inclusive, 
+    //     if (string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 90) {
+    //         strCopy.splice(i,0," ");
+    //     }
+        
+    // }
+
+    // codewars solution since i couldn't figure it out
+
+    string = string.split('').map(function (el) {
+        if (el === el.toUpperCase()) {
+            el = ' ' + el;
         }
-    }
+        return el
+    })
+
+    return string.join('')
     
-
-    return strCopy
-
 }
 
 console.log(solution("camelCasingTest"))
