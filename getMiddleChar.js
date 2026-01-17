@@ -12,11 +12,19 @@
     // "middle" --> "dd"
     // "A" --> "A"
 //Pseudocode
+// if length % 2 == 0, even length, need two chars
+// if length % 2 != 0, length is odd, need middle char
 // 
 
-function getMiddle (strang) {
+function getMiddle (s) {
 
+    let len = s.length;
 
+    if (len % 2 == 0) {
+        return s[len/2]
+    } else {
+        return s[len/2]
+    }
 
 }
 
