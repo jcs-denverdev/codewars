@@ -13,15 +13,15 @@
     // "A" --> "A"
 //Pseudocode
 // if length % 2 == 0, even length, need two chars
+// s[len/2] should give me the middle char
 // if length % 2 != 0, length is odd, need middle char
-// 
 
 function getMiddle (s) {
 
     let len = s.length;
 
     if (len % 2 == 0) {
-        return s[len/2]
+        return s[len/2 - 1] + s[len/2]
     } else {
         return s[len/2]
     }
