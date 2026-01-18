@@ -15,6 +15,8 @@
 // if length % 2 == 0, even length, need two chars
 // s[len/2] should give me the middle char
 // if length % 2 != 0, length is odd, need middle char
+// s[len/2] is going to return undefined because it is an odd number
+    // if (s == "car") --> len == 3 --> 3/2 == 1.5
 
 function getMiddle (s) {
 
@@ -23,9 +25,9 @@ function getMiddle (s) {
     if (len % 2 == 0) {
         return s[len/2 - 1] + s[len/2]
     } else {
-        return s[len/2]
+        return s[Math.floor(len/2)]
     }
 
 }
 
-console.log(getMiddle("middle"))
+console.log(getMiddle("testing"))
