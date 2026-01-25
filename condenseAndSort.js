@@ -7,12 +7,18 @@
 //Example:
     // Given [[3, 2, 1], [4, 6, 5], [], [9, 7, 8]], your function should return [1, 2, 3, 4, 5, 6, 7, 8, 9].
 //Pseudocode
-// arrays have the sort() method
-// remember that (a, b) => a - b sorts numbers in ascending order.
+// arrays have the sort() and concat() methods, which should be all we need here
+// remember that (a, b) => a - b sorts numbers in ascending order
+// single for-loop, we can console log to see each nested array
 
 function flattenAndSort(array) {
 
-    return array.sort((a,b) => a - b)
+    for (let i = 0; i < array.length; i++) {
+        // for (let j = 0; j < array.length; j++) {
+        //     console.log(array[i][j])
+        // }
+        console.log(array[i])
+    }
 
 }
 
