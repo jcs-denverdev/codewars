@@ -14,20 +14,26 @@
 
 function flattenAndSort(array) {
 
-    let flattened = []
-    for (let i = 0; i < array.length; i++) {
-        for (let j = 0; j < array.length; j++) {
-            // console.log(array[i][j]) // returns all elements individually
-            if (array[i].length > 1) {
-                flattened.push(array[i][j])
-            }
-        }
-        if (array[i].length < 2) {
-            flattened.push(array[i][0])
-        }
-    }
-    return flattened
+    // let flattened = [];
+    
+    // // works for arrays that aren't empty
+    // for (let i = 0; i < array.length; i++) {
+    //     for (let j = 0; j < array.length; j++) {
+    //         // console.log(array[i][j]) // returns all elements individually
+    //         if (array[i].length > 1) {
+    //             flattened.push(array[i][j])
+    //         }
+    //     }
+    //     if (array[i].length < 2) {
+    //         flattened.push(array[i][0])
+    //     }
+    // }
+    // return flattened
+
+    // codewars solution
+    return array.flat().sort((a,b) => a - b)
 
 }
 
 console.log(flattenAndSort([[1, 3, 5], [100], [2, 4, 6]]))
+console.log(flattenAndSort([[], []]))
