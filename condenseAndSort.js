@@ -20,11 +20,11 @@ function flattenAndSort(array) {
             // console.log(array[i][j]) // returns all elements individually
             if (array[i].length > 1) {
                 flattened.push(array[i][j])
-            } else {
-                continue
             }
         }
-
+        if (array[i].length < 2) {
+            flattened.push(array[i][0])
+        }
     }
     return flattened
 
