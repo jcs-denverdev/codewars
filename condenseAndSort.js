@@ -20,6 +20,8 @@ function flattenAndSort(array) {
             // console.log(array[i][j]) // returns all elements individually
             if (array[i].length > 1) {
                 flattened.push(array[i][j])
+            } else {
+                continue
             }
         }
 
