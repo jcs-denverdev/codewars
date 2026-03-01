@@ -17,12 +17,14 @@ function flattenAndSort(array) {
     let flattened = []
     for (let i = 0; i < array.length; i++) {
         for (let j = 0; j < array.length; j++) {
-            console.log(array[i][j]) // returns all elements individually
+            // console.log(array[i][j]) // returns all elements individually
+            if (array[i].length > 1) {
+                flattened.push(array[i][j])
+            }
         }
-        
-        flattened.push(array[i])
+
     }
-    // return flattened
+    return flattened
 
 }
 
