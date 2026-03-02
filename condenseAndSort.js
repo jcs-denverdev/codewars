@@ -10,15 +10,19 @@
 // arrays have the sort() and concat() methods, which should be all we need here
 // remember that (a, b) => a - b sorts numbers in ascending order
 // single for-loop, we can console log to see each nested array
+// nested for-loop for each element within each array?
 
 function flattenAndSort(array) {
 
+    let flattened = []
     for (let i = 0; i < array.length; i++) {
-        // for (let j = 0; j < array.length; j++) {
-        //     console.log(array[i][j])
-        // }
-        console.log(array[i])
+        for (let j = 0; j < array.length; j++) {
+            console.log(array[i][j]) // returns all elements individually
+        }
+        
+        flattened.push(array[i])
     }
+    // return flattened
 
 }
 
