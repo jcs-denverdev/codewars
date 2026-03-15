@@ -12,7 +12,6 @@
     // "hello" -> false
     // "mADaM" -> true
 //Pseudocode
-// loop through string forwards
 
 // .at(index) returns a new string consisting of the single utf-16 code unit located at the specified offset
 // .charAt(index) returns a new string consisting of the single utf-16 code unit at the given index
@@ -20,7 +19,25 @@
 
 function isPalindrome(x) {
 
-    
+// loop through string forwards and backwards, using separate for-loops
+// within both loops, add the characters at each index to an object
+// compare objects
+
+    // let forwards = [];
+    // let backwards = [];
+
+    // for (let i = 0; i < x.length; i++) {
+    //     forwards.push(x[i])
+    // }
+
+    // for (let j = x.length -1; j >= 0; j--) {
+    //     backwards.push(x[j])
+    // }
+
+    // console.log(`${forwards} --> ${backwards}`)
+    // return forwards == backwards
+
+
 
 }
 
