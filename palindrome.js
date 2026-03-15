@@ -13,9 +13,8 @@
     // "mADaM" -> true
 //Pseudocode
 
-// .at(index) returns a new string consisting of the single utf-16 code unit located at the specified offset
-// .charAt(index) returns a new string consisting of the single utf-16 code unit at the given index
-// .substring(startIndex, endIndex) returns the part of this string from the start index up to and excluding the end index, or to the end of the string if no end index supplied
+
+
 
 function isPalindrome(x) {
 
@@ -38,6 +37,23 @@ function isPalindrome(x) {
     // return forwards == backwards
 
 
+// .at(index) returns a new string consisting of the single utf-16 code unit located at the specified offset
+
+    for (let i = 0; i < x.length; i++) {
+        console.log(x.at(i))
+    }
+
+// .charAt(index) returns a new string consisting of the single utf-16 code unit at the given index
+
+    for (let j = 0; j < x.length; j++) {
+        console.log(x.charAt(j))
+    }
+
+// .substring(startIndex, endIndex) returns the part of this string from the start index up to and excluding the end index, or to the end of the string if no end index supplied
+
+    for (let k = 0; k < x.length; k++) {
+        console.log(x.substring(k))
+    }
 
 }
 
