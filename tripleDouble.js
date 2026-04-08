@@ -15,12 +15,13 @@
     // "Sea","urn","pms" => "Supermans"
     // "LLh","euo","xtr" => "LexLuthor"
 //Pseudocode
+// one[0] + two[0] + three[0] + one[1] + two[1] + three[1] + etc...
 // 
 
 function tripleTrouble(one, two, three) {
 
-
+    return one[0] + two[0] + three[0] + one[1] + two[1] + three[1]
 
 }
 
-console.log(tripleTrouble("aa","bb","cc"))
+console.log(tripleTrouble("wt","hh","yo"))
