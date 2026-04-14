@@ -13,8 +13,8 @@
 
 function findAverage (array) {
 
-    return array.reduce((acc, current) => acc + current, 0) / array.length;
+    return array.length > 0 ? array.reduce((acc, current) => acc + current, 0) / array.length : 0;
 
 }
 
-console.log(findAverage([77, 80, 68, 72]))
+console.log(findAverage([]))
