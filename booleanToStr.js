@@ -21,6 +21,9 @@ function boolToWord (bool) {
     
     return link == "true" ? "Yes" : "No";
 
+    //codewars top solution:
+    // return bool ? 'Yes' : 'No';
+
 }
 
 console.log(boolToWord(false));
