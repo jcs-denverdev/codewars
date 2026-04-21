@@ -13,7 +13,13 @@
 
 function boolToWord (bool) {
 
-    return true ? "Yes" : "No";
+    // return true ? "Yes" : "No";
+    // return false ? "No" : "Yes"
+    // why is false returning "Yes"?
+    
+    const link = bool.toString();
+    
+    return link == "true" ? "Yes" : "No";
 
 }
 
