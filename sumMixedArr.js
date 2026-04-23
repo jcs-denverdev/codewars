@@ -13,12 +13,13 @@
 
 //Pseudocode
 // built-in Number() method to convert string to number
-// then simple reduce() method
+// reduce() method to add values within a given array
+// where do i put Number()?
 
 
 function sumMix(x) {
 
-
+    return x.reduce((acc, curr) => acc + Number(curr), 0)
 
 }
 
