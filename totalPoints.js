@@ -36,21 +36,19 @@
 function points(games) {
 
     let myTeamPoints = 0;
-    // let opposingTeamPoints = 0;
 
     for (let i = 0; i < games.length; i++) {
-        // games[i] --> each string returned
-        // return games[i][0]
-        if (games[i][0] > games[i][i+2]) {
+
+        if (games[i][0] > games[i][2]) {
             myTeamPoints += 3;
-        } else if (games[i][0] < games[i][i+2]) {
+        } else if (games[i][0] < games[i][2]) {
             myTeamPoints;
         } else {
             myTeamPoints += 1;
-            // opposingTeamPoints += 1;
         }
         
     }
+
     return myTeamPoints;
 
 }
