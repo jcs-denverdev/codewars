@@ -31,11 +31,29 @@
 
 //Pseudocode
 // there needs to be a conditional statement to compare your team's score to the other team's score, likely looping through the array and grabbing the index's index
+// hard coding index values doesn't work, the colons are messing it up I think
 
 function points(games) {
 
-    
+    let myTeamPoints = 0;
+    // let opposingTeamPoints = 0;
+
+    for (let i = 0; i < games.length; i++) {
+        // games[i] --> each string returned
+        // return games[i][0]
+        if (games[i][0] > games[i][i+2]) {
+            myTeamPoints += 3;
+        } else if (games[i][0] < games[i][i+2]) {
+            myTeamPoints;
+        } else {
+            myTeamPoints += 1;
+            // opposingTeamPoints += 1;
+        }
+        
+    }
+    return myTeamPoints;
 
 }
 
-console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]))
+console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]));
+console.log(points(["1:1","2:2","3:3","4:4","2:2","3:3","4:4","3:3","4:4","4:4"]));
