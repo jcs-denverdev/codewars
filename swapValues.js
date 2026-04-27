@@ -18,10 +18,12 @@
     // [70, 12] ==> [12, 70]
 //Pseudocode
 // right off the bat, it looks like the function has no parameters, but the instructions say we want to pass an array with two elements to the function and swap them
+// check reverse() method first..
+// .. uhh yeah too easy
 
 function swapValues(arr) {
 
-
+    return arr.reverse()
 
 }
 
