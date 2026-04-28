@@ -37,6 +37,9 @@ function twoSort(s) {
     // x + "***"
     return mapped.join('')
 
+    // top codewars solution... smh
+    // return s.sort()[0].split('').join('***')
+
 }
 
 console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]))
