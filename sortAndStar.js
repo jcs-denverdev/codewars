@@ -18,19 +18,24 @@
 // return item [0] with *** between each letter
 // to place stars between each letter, loop through first item after sorting original array
 // try map()
-// 
+// map() works, but adds stars to the end of the final character, which is bad
+// maybe a conditional to add "***" to x unless its the last character (but how??)
+// indexOf()?
+// if (!firstVal.indexOf(x) == firstVal.length-1)
 
 function twoSort(s) {
 
     let firstVal = s.sort()[0].split('');
 
-    // for (let i = 0; i < firstVal.length; i++) {
-    //     firstVal.splice(i, "***")
-    // }
-
-    const mapped = firstVal.map((x) => x + "***")
-    return mapped.join("")
-
+    const mapped = firstVal.map((char, index, arr) => {
+        if (index < arr.length - 1) {
+            return char + "***";
+        } else {
+            return char
+        }
+    })
+    // x + "***"
+    return mapped.join('')
 
 }
 
