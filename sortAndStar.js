@@ -29,7 +29,7 @@ function twoSort(s) {
     // }
 
     const mapped = firstVal.map((x) => x + "***")
-    return mapped
+    return mapped.join("")
 
 
 }
