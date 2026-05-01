@@ -16,10 +16,20 @@
 // the sort() method sorts the elements of an array in place, defaults to ascending
 // do I need to convert each string to lowercase?
 // return item [0] with *** between each letter
-
+// to place stars between each letter, loop through first item after sorting original array
+// try map()
+// 
 
 function twoSort(s) {
 
+    let firstVal = s.sort()[0].split('');
+
+    // for (let i = 0; i < firstVal.length; i++) {
+    //     firstVal.splice(i, "***")
+    // }
+
+    const mapped = firstVal.map((x) => x + "***")
+    return mapped
 
 
 }
