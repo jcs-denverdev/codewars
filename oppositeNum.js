@@ -17,4 +17,8 @@
 
 function opposite(number) {
 
+    return number > 0 ? number-number*2 : number+number*2;
+
 }
+
+console.log(opposite(-12525220))
