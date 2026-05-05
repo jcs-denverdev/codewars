@@ -12,11 +12,13 @@
     // -100 --> "-100"
 
 //Pseudocode
-
+// the Number() constructor does the opposite, converting a valid string to a number
+//let's look at mdn and see what methods exist so we can do this in one line
+// .toString() seems to work
 
 function numberToString(num) {
 
-
+    return num.toString();
 
 }
 
