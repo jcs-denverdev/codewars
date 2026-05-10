@@ -15,16 +15,16 @@
     // time = 11.8--> litres = 5
 
 //Pseudocode
-// I think we can run a for loop, similar to 100devs 21savage loop
-// for (let i = 1; i < time; i++)
-// 
+// time * 0.5
+// Math.floor since we are rounding down
 
 function litres(time) {
 
-    for (let i = 1; i < time; i++) {
-        console.log(i)
-    }
+    // for (let lit = 0.5; lit <= time; lit+=0.5) {
+    //     return lit
+    // }
 
+    return Math.floor(time*0.5)
 }
 
-console.log(litres(30))
+console.log(litres(6.7))
