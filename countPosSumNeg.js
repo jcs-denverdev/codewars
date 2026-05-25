@@ -20,27 +20,12 @@
 
 function countPositivesSumNegatives(input) {
 
-    // declare count and sum variables and set to 0
-    let count = 0;
-    let sum = 0;
-
-    // use a for loop to loop through array (input)
-    for (let n = 0; n < input.length; n++) {
     // If the input is an empty array or is null, return an empty array.
-        if (!input) {
-            return []
-        }
-    // need a conditional to either increment count or sum based on positive or negative element value
-        if (input[n] > 0) {
-            count++;
-        } else if (input[n] < 0) {
-            sum+=input[n];
-        } else if (input[n] === 0) {
-            count;
-            sum;
-        }
-    }
-    return [count, sum]
+    if (input.length === 0 || !input) return [];
+    
+    return input.reduce(([count, sum], curr) => {
+        return curr > 0 ? [count + 1, sum] : [count, sum + curr];
+    }, [0, 0]);
 
 }
 
