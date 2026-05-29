@@ -14,7 +14,6 @@
 
 function greet(name) {
 
-    name = prompt("Type your name")
     return `Hello, ${name} how are you doing today?`
 
 }
