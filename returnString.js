@@ -10,7 +10,6 @@
 //Examples
     // "Hello, Colin how are you doing today?"
 //Pseudocode
-//name needs to be a prompt
 // 'Hello ${name}'
 
 function greet(name) {
@@ -19,3 +18,4 @@ function greet(name) {
     return `Hello, ${name} how are you doing today?`
 
 }
+
