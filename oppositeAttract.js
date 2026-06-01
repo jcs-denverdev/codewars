@@ -25,6 +25,8 @@ function lovefunc(flower1, flower2){
     } else {
         return false;
     }
+    // top kata solution
+    // return flower1 % 2 !== flower 2 % 2;
 
 }
 
