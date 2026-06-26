@@ -19,29 +19,35 @@
 
 function isVow(a){
 
-    let result = a.forEach(element => {
-        switch (element) {
-            case 97:
-                element = "a";
-                break;
-            case 101:
-                element = "e";
-                break;
-            case 105:
-                element = "i";
-                break;
-            case 111:
-                element = "o";
-                break;
-            case 117:
-                element = "u";
-                break;
-            default:
-                return `Fail`
-        }
-    });
+    // let result = a.forEach(element => {
 
-    return result
+    //     a.charCodeAt(element);
+
+    // });
+
+    // return result
+
+    let result = [];
+    for (let i = 0; i < a.length; i++) {
+        
+        if (a[i] == 97) {
+            a[i] = "a";
+        }
+        if (a[i] == 101) {
+            a[i] = "e"
+        }
+        if (a[i] == 105) {
+            a[i] = "i"
+        }
+        if (a[i] == 111) {
+            a[i] = "o"
+        }
+        if (a[i] == 117) {
+            a[i] = "u"
+        }
+        result.push(a[i]);
+    }
+    return result;
 
 
 
