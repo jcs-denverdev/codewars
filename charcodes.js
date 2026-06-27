@@ -19,37 +19,57 @@
 
 function isVow(a){
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    let result = a;
-    let vowels = ['a', 'e', 'i', 'o', 'u']
-
-    for (let i = 0; i < result.length; i++) {
-        for (let j = 0; j < vowels.length; j++) {
-            if (result[i] === vowels[j].charCodeAt()) {
-                result[i] = String.fromCharCode(result[i]);
+    let result = a.forEach(element => {
+        switch (element) {
+            case 97:
+                element = "a";
                 break;
-            }
+            case 101:
+                element = "e";
+                break;
+            case 105:
+                element = "i";
+                break;
+            case 111:
+                element = "o";
+                break;
+            case 117:
+                element = "u";
+                break;
+            default:
+                return `Fail`
         }
-    }
+    });
+
     return result
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    // let result = a;
+    // let vowels = ['a', 'e', 'i', 'o', 'u']
+
+    // for (let i = 0; i < result.length; i++) {
+    //     for (let j = 0; j < vowels.length; j++) {
+    //         if (result[i] === vowels[j].charCodeAt()) {
+    //             result[i] = String.fromCharCode(result[i]);
+    //             break;
+    //         }
+    //     }
+    // }
+    // return result
 
     // const vowels = {
     //     "97": "a",
