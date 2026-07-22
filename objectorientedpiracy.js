@@ -39,14 +39,20 @@
     // const aWorthyship = new Ship(100,20) ==> true
 
 //Pseudocode
-// 
+// the method isWorthIt just needs to do some mathematics
+// if (crew*1.5 > 20) return true
 
 
 class Ship {
     constructor(draft, crew) {
-    this.draft = draft
-    this.crew = crew
+        this.draft = draft
+        this.crew = crew
     }
 
     // YOUR CODE HERE
+    isWorthIt() {
+        return this.crew * 1.5 > 20;
+    }
 }
+
+const aWorthyship = new Ship(100,20)
