@@ -23,9 +23,7 @@
 // Each crew member adds 1.5 units to the ship draft. If after removing the weight of the crew, the draft is still more than 20, then the ship is worth looting. Any ship weighing that much must have a lot of booty!
 
 // Add the method <isWorthIt> to decide if the ship is worthy to loot.
-// For example:
-    // titanic.isWorthIt() // return false
-// Good luck and may you find GOOOLD!
+
 
 //Params
 // draft - an estimate of the ship's total weight
@@ -51,8 +49,13 @@ class Ship {
 
     // YOUR CODE HERE
     isWorthIt() {
-        return this.crew * 1.5 > 20;
+        return this.draft - (this.crew * 1.5) > 20
     }
 }
 
 const aWorthyship = new Ship(100,20)
+const emptyShip = new Ship(0,0)
+const aBoat = new Ship(15,20)
+const titanic = new Ship(15,10)
+
+console.log(aBoat.isWorthIt())
