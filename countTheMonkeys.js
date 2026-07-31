@@ -2,7 +2,6 @@
 
 // As a good parent, you will sit and count with him. Given the number (n), populate an array with all numbers up to and including that number, but excluding zero.
 
-
 //Params
 // a number of monkeys n
 
@@ -14,7 +13,17 @@
     //  1 --> [1]
 //Pseudocode
 // will need a for loop and an empty array to push into
+// initialization at 1, not 0
 
 function monkeyCount (n) {
-    
+    let arr = [];
+
+    for (let i = 1; i <= n; i++) {
+        arr.push(i)
+    }
+
+    return arr
 }
+
+console.log(monkeyCount(5))
+console.log(monkeyCount(8))
