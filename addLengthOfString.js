@@ -18,7 +18,8 @@
 
 function addLength(str) {
 
-    // str.split(" ")
+    let arr = str.split(" ");
+    return arr.map(s => `${s} ${s.length}`)
 
 }
 
